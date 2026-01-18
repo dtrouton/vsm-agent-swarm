@@ -1,0 +1,46 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/log_action.py \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_INPUT\""
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "s1-*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/update_metrics.py \"$CLAUDE_AGENT_NAME\" \"$CLAUDE_AGENT_STATUS\""
+          }
+        ]
+      },
+      {
+        "matcher": "system*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/log_system_agent.py \"$CLAUDE_AGENT_NAME\" \"$CLAUDE_AGENT_STATUS\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/session_complete.py"
+          }
+        ]
+      }
+    ]
+  }
+}

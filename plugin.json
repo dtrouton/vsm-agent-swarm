@@ -1,0 +1,30 @@
+{
+  "name": "vsm-orchestrator",
+  "version": "1.0.0",
+  "description": "Viable Systems Model multi-agent orchestration for development tasks",
+  "author": "VSM Plugin",
+  "repository": "",
+  "agents": [
+    "agents/system5-policy.md",
+    "agents/system4-strategy.md",
+    "agents/system3-control.md",
+    "agents/system3-audit.md",
+    "agents/system2-coordination.md",
+    "agents/system1/generalist-coder.md",
+    "agents/system1/code-writer.md",
+    "agents/system1/tester.md",
+    "agents/system1/reviewer.md",
+    "agents/system1/documenter.md",
+    "agents/system1/frontend.md",
+    "agents/system1/backend.md",
+    "agents/system1/database.md",
+    "agents/system1/infrastructure.md"
+  ],
+  "commands": [
+    "commands/vsm.md"
+  ],
+  "skills": [
+    "skills/vsm-orchestrate.md"
+  ],
+  "hooks": "hooks/hooks.json"
+}
