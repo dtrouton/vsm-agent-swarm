@@ -4,6 +4,8 @@ The `orchestrator/` module is the Python implementation of the VSM control loop.
 
 ## Installation
 
+**Requirements:** Python 3.9+ (uses built-in generic type hints)
+
 The orchestrator uses only Python standard library - no external dependencies required.
 
 ```bash

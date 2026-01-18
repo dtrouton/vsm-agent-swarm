@@ -19,7 +19,7 @@ This guide walks you through using the VSM Multi-Agent Orchestrator for your dev
 ### Prerequisites
 
 - Claude Code CLI installed and configured
-- Python 3.8+ (for the orchestrator)
+- Python 3.9+ (for the orchestrator)
 
 ### Installation
 
