@@ -1,3 +1,0 @@
-# VSM Orchestrator Dependencies
-# Requires Python 3.13+
-# No external dependencies - uses Python standard library only
